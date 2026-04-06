@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Landing Page | Armando Trejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study-page">
+    <div class="bg-noise"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <div class="back-nav">
+        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+    </div>
+
+    <div class="boxed-wrapper page-transition-wrapper">
+        <article class="case-content">
+            <header class="case-header-main" data-reveal>
+                <span class="numb">01/ PROJECT</span>
+                <h1>High-Conversion Landing Page: <span class="gradient-text">Optimizing Lead Acquisition</span></h1>
+                <p class="case-hook">"Rediseñé la arquitectura de información para reducir la fricción en el embudo de ventas."</p>
+                
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <label>Role</label>
+                        <span>Lead Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <label>Tools</label>
+                        <span>Figma, AI Tools</span>
+                    </div>
+                    <div class="meta-item">
+                        <label>Focus</label>
+                        <span>Conversion & Marketing</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="case-image-hero" data-reveal>
+                <img src="IMAGENES/featured/landing.png" alt="Landing Page Showcase">
+            </section>
+
+            <div class="case-blocks">
+                <section class="case-block" data-reveal>
+                    <h2>Context</h2>
+                    <p>The goal was to increase conversions and generate more leads for a high-growth digital service. The existing site struggled to communicate its value proposition clearly, resulting in high bounce rates and low CTA engagement.</p>
+                </section>
+
+                <section class="case-block" data-reveal>
+                    <h2>The Problem</h2>
+                    <p>The previous structure was unclear and lacked a strong, strategic call-to-action. Information layout was cluttered, and the mobile experience was neglected, directly impacting the revenue potential of the campaign.</p>
+                </section>
+
+                <section class="case-image-full" data-reveal>
+                    <div class="grid-showcase">
+                        <img src="IMAGENES/aldea-min.webp" alt="Grid and Layout Detail">
+                        <div class="showcase-caption">
+                            <span>Visual Insight:</span> Showing the Grid and Typographic Hierarchy. This demonstrates technical design thinking behind the aesthetics.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block highlight-block" data-reveal>
+                    <h2>The Solution</h2>
+                    <p>Redesigned the entire layout with a clear hierarchy, simplified sections, and stronger CTA placement. I focused on a "Mobile-First" approach, ensuring the funnel's most critical entry point was perfectly optimized.</p>
+                    <ul class="solution-list">
+                        <li><strong>Strategic UX:</strong> Reduced information density by 40%.</li>
+                        <li><strong>Conversion Power:</strong> Redesigned CTAs using psychology-based visual cues.</li>
+                        <li><strong>AI-Driven:</strong> Utilized AI workflows for faster asset iteration and high-fidelity mockups.</li>
+                    </ul>
+                </section>
+
+                <section class="case-block seniority-touches" data-reveal>
+                    <h2>The Seniority Edge</h2>
+                    <div class="touches-grid">
+                        <div class="touch-item">
+                            <i class="fa-solid fa-universal-access"></i>
+                            <h3>Accessibility (WCAG)</h3>
+                            <p>Contrasts and font sizes are meticulously tested for full accessibility compliance.</p>
+                        </div>
+                        <div class="touch-item">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Development Ready</h3>
+                            <p>Organized handoff files with clear variables and documentation (Dev-Ready).</p>
+                        </div>
+                        <div class="touch-item">
+                            <i class="fa-solid fa-sparkles"></i>
+                            <h3>Micro-interactions</h3>
+                            <p>Implemented subtle scroll triggers and button states for a premium, alive feel.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block" data-reveal>
+                    <h2>Results</h2>
+                    <p>Improved user clarity and significantly increased lead generation. The refined architecture led to a smoother sales funnel and higher stakeholder ROI.</p>
+                </section>
+            </div>
+
+            <footer class="case-footer">
+                <a href="project-2.html" class="btn-wa">Siguiente Proyecto <i class="fa-solid fa-arrow-right"></i></a>
+            </footer>
+        </article>
+    </div>
+
+    <script>
+        const revealTargets = document.querySelectorAll('[data-reveal]');
+        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        revealTargets.forEach((el) => revealObserver.observe(el));
+
+        // Loading state integration
+        document.querySelectorAll('.btn-wa, .btn-back').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const target = this.getAttribute('target');
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) return; 
+                if (!target || target !== '_blank') {
+                    e.preventDefault();
+                    this.classList.add('is-loading');
+                    setTimeout(() => { window.location.href = href; }, 400);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

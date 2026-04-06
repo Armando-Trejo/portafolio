@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Design System | Armando Trejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study-page">
+    <div class="bg-noise"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <div class="back-nav">
+        <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+    </div>
+
+    <div class="boxed-wrapper page-transition-wrapper">
+        <article class="case-content">
+            <header class="case-header-main" data-reveal>
+                <span class="numb">03/ PROJECT</span>
+                <h1>Atomic Design System: <span class="gradient-text">AI-Driven Productivity</span></h1>
+                <p class="case-hook">"Construí una librería de componentes escalable que estandariza la UI y reduce el tiempo de desarrollo mediante variables semánticas."</p>
+                
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <label>Role</label>
+                        <span>Design Ops Lead</span>
+                    </div>
+                    <div class="meta-item">
+                        <label>Tools</label>
+                        <span>Figma Variables, Design Tokens</span>
+                    </div>
+                    <div class="meta-item">
+                        <label>Focus</label>
+                        <span>Productivity & Consistency</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="case-image-hero" data-reveal>
+                <img src="IMAGENES/featured/design_system.png" alt="Atomic Design System Showcase">
+            </section>
+
+            <div class="case-blocks">
+                <section class="case-block" data-reveal>
+                    <h2>Context</h2>
+                    <p>As the product team grew, design inconsistencies and repetitive tasks started slowing down development. A unified source of truth was needed to ensure visual consistency across all touchpoints.</p>
+                </section>
+
+                <section class="case-block" data-reveal>
+                    <h2>The Problem</h2>
+                    <p>Developers were hardcoding colors and spacing, and designers were recreating similar components over and over. This friction resulted in a "Frankenstein" UI and delayed product launches.</p>
+                </section>
+
+                <section class="case-image-full" data-reveal>
+                    <div class="grid-showcase">
+                        <img src="IMAGENES/1828-min.webp" alt="Design Token Details">
+                        <div class="showcase-caption">
+                            <span>System Logic:</span> Tokenizing colors and typographies creates a single source of truth for both Design and Engineering teams.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block highlight-block" data-reveal>
+                    <h2>The Solution</h2>
+                    <p>Built a comprehensive Atomic Design System in Figma, utilizing nested components, auto-layout, and semantic variables to ensure complete scalability.</p>
+                    <ul class="solution-list">
+                        <li><strong>Token Architecture:</strong> Mapped core variables (Colors, Typography, Spacing).</li>
+                        <li><strong>Component Library:</strong> Created fully responsive, stateful components.</li>
+                        <li><strong>AI-Assisted Ops:</strong> Used AI to generate comprehensive component documentation.</li>
+                    </ul>
+                </section>
+
+                <section class="case-block seniority-touches" data-reveal>
+                    <h2>Design Ops Mastery</h2>
+                    <div class="touches-grid">
+                        <div class="touch-item">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>1:1 Mapping</h3>
+                            <p>Every Figma token maps directly to a CSS/React variable for seamless integration.</p>
+                        </div>
+                        <div class="touch-item">
+                            <i class="fa-solid fa-sparkles"></i>
+                            <h3>Dark/Light Variables</h3>
+                            <p>Implemented nested variable collections to switch themes instantly without redesigning.</p>
+                        </div>
+                        <div class="touch-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Team Onboarding</h3>
+                            <p>Wrote the playbook for how other designers consume and contribute to the library.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-block" data-reveal>
+                    <h2>Results</h2>
+                    <p>Reduced design-to-development handoff time by 40%. The system established a shared language between disciplines, drastically lowering QA bugs related to UI inconsistencies.</p>
+                </section>
+            </div>
+
+            <footer class="case-footer">
+                <a href="index.html" class="btn-wa">Regresar al Home <i class="fa-solid fa-arrow-right"></i></a>
+            </footer>
+        </article>
+    </div>
+
+    <script>
+        const revealTargets = document.querySelectorAll('[data-reveal]');
+        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        revealTargets.forEach((el) => revealObserver.observe(el));
+
+        // Loading state integration
+        document.querySelectorAll('.btn-wa, .btn-back').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const target = this.getAttribute('target');
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) return; 
+                if (!target || target !== '_blank') {
+                    e.preventDefault();
+                    this.classList.add('is-loading');
+                    setTimeout(() => { window.location.href = href; }, 400);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

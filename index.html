@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armando Trejo | Portfolio Definitivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="scroll-progress"></div>
+    <div class="bg-noise"></div>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <div class="lang-container">
+        <div class="lang-pill">
+            <button onclick="setLanguage('es')" id="btn-es" class="active">
+                <i class="fa-solid fa-earth-americas"></i> ES
+            </button>
+            <button onclick="setLanguage('en')" id="btn-en">
+                EN <i class="fa-solid fa-earth-europe"></i>
+            </button>
+        </div>
+    </div>
+
+    <nav class="nav-dock" id="navDock">
+        <a href="#home" class="nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="#featured" class="nav-item">WORKS</a>
+        <a href="#web" class="nav-item">WEB</a>
+        <a href="#expo" class="nav-item">EXPO</a>
+        <a href="#virtual-360" class="nav-item">360</a>
+        <a href="#contact" class="nav-item highlight"><i class="fa-solid fa-paper-plane"></i></a>
+    </nav>
+
+    <div class="boxed-wrapper page-transition-wrapper">
+
+        <!-- HERO -->
+        <header class="hero-section" id="home" data-reveal>
+            <div class="hero-content">
+                <div class="status-tag" data-es="● PRODUCT & UI DESIGNER" data-en="● PRODUCT & UI DESIGNER">● PRODUCT & UI DESIGNER</div>
+                <h1 class="hero-title" data-es="Product Designer for <span class='gradient-text'>High-Growth Experiences.</span>" data-en="Product Designer for <span class='gradient-text'>High-Growth Experiences.</span>">Product Designer for <span class="gradient-text">High-Growth Experiences.</span></h1>
+                <p class="hero-sub" 
+                   data-es="Escalo productos digitales mediante diseño estratégico, sistemas UI y workflows asistidos por IA." 
+                   data-en="Scaling digital products through strategic design, UI systems, and AI-driven workflows.">
+                   Escalo productos digitales mediante diseño estratégico, sistemas UI y workflows asistidos por IA.
+                </p>
+                
+                <div class="hero-bullets">
+                    <div class="bullet-item"><i class="fa-solid fa-check"></i> <span data-es="Diseño UI/UX Estratégico" data-en="Strategic UI/UX Design">Diseño UI/UX Estratégico</span></div>
+                    <div class="bullet-item"><i class="fa-solid fa-check"></i> <span data-es="Sistemas de Diseño Escalables" data-en="Scalable Design Systems">Sistemas de Diseño Escalables</span></div>
+                    <div class="bullet-item"><i class="fa-solid fa-check"></i> <span data-es="Implementación de IA para Design Ops" data-en="AI Implementation for Design Ops">Implementación de IA para Design Ops</span></div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#featured" class="btn-wa"> <span data-es="Ver Proyectos" data-en="View Projects">Ver Proyectos</span> <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-frame" id="heroImageFrame">
+                <img src="IMAGENES/foto-de-perfil.webp" alt="Armando Trejo">
+            </div>
+        </header>
+
+        <!-- 01. FEATURED STRATEGIC WORKS -->
+        <section class="section" id="featured" data-reveal>
+            <span class="numb">01/ CASE STUDIES</span>
+            <h2 class="title" data-es="Proyectos Estratégicos" data-en="Strategic Projects">Proyectos Estratégicos</h2>
+            <div class="projects-grid">
+                <a href="project-1.html" class="featured-card" data-reveal>
+                    <div class="card-img-wrapper"><img src="IMAGENES/featured/landing.png" alt="Revenue Project"></div>
+                    <div class="card-info">
+                        <span class="numb">REVENUE & CONVERSION</span>
+                        <h3 data-es="Landing Page de Alta Conversión" data-en="High-Conversion Landing Page">Landing Page de Alta Conversión</h3>
+                        <p data-es="Optimización de captación de leads mediante arquitectura de información." data-en="Optimizing lead acquisition through information architecture.">Optimización de captación de leads mediante arquitectura de información.</p>
+                        <div class="card-cta"><span data-es="Ver Caso de Estudio" data-en="View Case Study">Ver Caso de Estudio</span> <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <a href="project-2.html" class="featured-card" data-reveal>
+                    <div class="card-img-wrapper"><img src="IMAGENES/featured/saas.png" alt="SaaS Logic"></div>
+                    <div class="card-info">
+                        <span class="numb">LOGIC & SYSTEMS</span>
+                        <h3 data-es="Ecosistema SaaS: Dashboard" data-en="SaaS Ecosystem: Dashboard">Ecosistema SaaS: Dashboard</h3>
+                        <p data-es="Simplificación de flujos de datos complejos e interfaces intuitivas." data-en="Simplifying complex data workflows and intuitive interfaces.">Simplificación de flujos de datos complejos e interfaces intuitivas.</p>
+                        <div class="card-cta"><span data-es="Ver Caso de Estudio" data-en="View Case Study">Ver Caso de Estudio</span> <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <a href="project-3.html" class="featured-card" data-reveal>
+                    <div class="card-img-wrapper"><img src="IMAGENES/featured/design_system.png" alt="Scalability"></div>
+                    <div class="card-info">
+                        <span class="numb">SCALABILITY & AI</span>
+                        <h3 data-es="Sistema de Diseño Atómico" data-en="Atomic Design System">Sistema de Diseño Atómico</h3>
+                        <p data-es="Creación de librería escalable y flujo de trabajo acelerado por IA." data-en="Building a scalable library and AI-accelerated workflow.">Creación de librería escalable y flujo de trabajo acelerado por IA.</p>
+                        <div class="card-cta"><span data-es="Ver Caso de Estudio" data-en="View Case Study">Ver Caso de Estudio</span> <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 02. WEB PRODUCTION CAROUSEL -->
+        <section class="section" id="web" data-reveal>
+            <span class="numb">02/ WEB DESIGN</span>
+            <div class="section-header-flex">
+                <h2 class="title" data-es="Ecosistema de Diseño Web" data-en="Web Design Ecosystem">Ecosistema de Diseño Web</h2>
+                <div class="carousel-controls">
+                    <button class="control-btn prev" onclick="moveCarousel(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="control-btn next" onclick="moveCarousel(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="web-carousel-window" id="carouselWindow">
+                <div class="web-track">
+                    <a href="https://aldea.work/" class="p-card-mini" target="_blank"><img src="IMAGENES/aldea-min.webp"><span>Aldea Digital</span></a>
+                    <a href="https://aguileramotors.com/" class="p-card-mini" target="_blank"><img src="IMAGENES/aguilera-min.webp"><span>Aguilera Motors</span></a>
+                    <a href="https://riolimpio.com.mx/" class="p-card-mini" target="_blank"><img src="IMAGENES/rio-min.webp"><span>Rio Limpio</span></a>
+                    <a href="https://grupomaen.mx/" class="p-card-mini" target="_blank"><img src="IMAGENES/maen-min.webp"><span>Grupo Maen</span></a>
+                    <a href="https://ides.inedito.digital" class="p-card-mini" target="_blank"><img src="IMAGENES/ides-min.webp"><span>IDES</span></a>
+                    <a href="https://1828brasaycarbon.mx" class="p-card-mini" target="_blank"><img src="IMAGENES/1828-min.webp"><span>1828 Brasa y Carbón</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. EXPO -->
+        <section class="section" id="expo" data-reveal>
+            <span class="numb">03/ INTERACTIVE</span>
+            <h2 class="title" data-es="Activaciones para Expo" data-en="Expo Activations">Activaciones para Expo</h2>
+            <div class="expo-grid-v3">
+                <div class="expo-card-v3">
+                    <div class="card-header-v3"><div class="icon-box"><i class="fa-solid fa-gamepad"></i></div><div class="status-dot"></div></div>
+                    <div class="card-body-v3">
+                        <h3 data-es="RULETA DE PREMIOS" data-en="PRIZE WHEEL">RULETA DE PREMIOS</h3>
+                        <p data-es="Ruleta interactiva personalizable para sorteos." data-en="Customizable interactive wheel for giveaways.">Ruleta interactiva personalizable para sorteos.</p>
+                        <a href="https://ruleta-expo.inedito.digital/demo" target="_blank" class="btn-demo-v3">DEMO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="expo-card-v3">
+                    <div class="card-header-v3"><div class="icon-box"><i class="fa-solid fa-camera"></i></div><div class="status-dot"></div></div>
+                    <div class="card-body-v3">
+                        <h3 data-es="PHOTO OPPORTUNITY" data-en="PHOTO OPPORTUNITY">PHOTO OPPORTUNITY</h3>
+                        <p data-es="Photobooth con marcos personalizados." data-en="Photobooth with custom frames.">Photobooth con marcos personalizados.</p>
+                        <a href="https://photo-oportunity.inedito.digital/demo" target="_blank" class="btn-demo-v3">DEMO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="expo-card-v3">
+                    <div class="card-header-v3"><div class="icon-box"><i class="fa-solid fa-table-cells"></i></div><div class="status-dot"></div></div>
+                    <div class="card-body-v3">
+                        <h3 data-es="TIC TAC TOE" data-en="TIC TAC TOE">TIC TAC TOE</h3>
+                        <p data-es="Gato interactivo con premios e IA." data-en="Interactive Tic-Tac-Toe with AI.">Gato interactivo con premios e IA.</p>
+                        <a href="https://tic-tac-toe.inedito.digital/demo" target="_blank" class="btn-demo-v3">DEMO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. IA CASE -->
+        <section class="section" id="ia-case" data-reveal>
+            <span class="numb">04/ AI DESIGN</span>
+            <div class="case-grid">
+                <div class="case-info">
+                    <h3 data-es="IA Case Study: Cortés" data-en="AI Case Study: Cortés">IA Case Study: Cortés</h3>
+                    <p data-es="Implementación de workflow híbrido para Luxury Leather Goods." data-en="Hybrid workflow implementation for Luxury Leather Goods.">Implementación de workflow híbrido para Luxury Leather Goods.</p>
+                    <a href="https://drive.google.com/file/d/1dkuM3D9v6r3q4ykBjvs4EAZGt-RrLJl5/view?usp=sharing" target="_blank" class="btn-outline">PDF <i class="fa-solid fa-file-pdf"></i></a>
+                </div>
+                <div class="case-visual"><img src="IMAGENES/photoshoot-min.webp" alt="IA"></div>
+            </div>
+        </section>
+
+        <!-- 05. 360 -->
+        <section class="section" id="virtual-360" data-reveal>
+            <span class="numb">05/ IMMERSIVE</span>
+            <h2 class="title" data-es="Visitas Virtuales 360" data-en="Virtual 360 Tours">Visitas Virtuales 360</h2>
+            <div class="full-width-card">
+                <div class="card-overlay"><h3 data-es="Visor Inmobiliario Inmersivo" data-en="Real Estate Immersive Viewer">Visor Inmobiliario Inmersivo</h3></div>
+                <a href="https://visor360.inedito.digital/recorrido" target="_blank" class="btn-wa btn-visor-floating">
+                    <i class="fa-solid fa-vr-cardboard"></i> <span data-es="ABRIR" data-en="OPEN">ABRIR</span>
+                </a>
+                <img src="IMAGENES/visor-min.webp" alt="360">
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact-centered" id="contact" data-reveal>
+            <div class="cta-content">
+                <h2 data-es="¿LISTO PARA INNOVAR?" data-en="READY TO INNOVATE?">¿LISTO PARA INNOVAR?</h2>
+                <a href="https://wa.me/524495136907" class="btn-wa bigger" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-es="WHATSAPP" data-en="WHATSAPP">WHATSAPP</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-es]').forEach((el) => {
+                const value = el.getAttribute('data-' + lang);
+                // Si el elemento tiene HTML (span o h1), lo insertamos como innerHTML
+                if (el.children.length > 0 || el.innerHTML.includes('<')) {
+                    el.innerHTML = value;
+                } else {
+                    el.textContent = value;
+                }
+            });
+            document.querySelectorAll('.lang-pill button').forEach(b => b.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+
+        // --- Intersection Observer for Animations ---
+        const revealTargets = document.querySelectorAll('[data-reveal]');
+        const isTouchDevice = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+        if ('IntersectionObserver' in window && !isTouchDevice) {
+            document.documentElement.classList.add('reveal-enabled');
+            const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            revealTargets.forEach(el => revealObserver.observe(el));
+        } else {
+            revealTargets.forEach(el => el.classList.add('visible'));
+        }
+
+        // --- Carousel Logic ---
+        function moveCarousel(dir) {
+            const track = document.getElementById('carouselWindow');
+            const amount = dir * 280;
+            track.scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
+        // --- Navigation Scroll Logic ---
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinks = document.querySelectorAll('.nav-dock .nav-item');
+        const updateNav = () => {
+            const trigger = window.scrollY + 100;
+            let current = 'home';
+            sections.forEach(s => { if (trigger >= s.offsetTop) current = s.getAttribute('id'); });
+            navLinks.forEach(l => {
+                l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+            });
+        };
+        window.addEventListener('scroll', updateNav, { passive: true });
+        updateNav();
+
+        // --- Hero Parallax ---
+        const heroFrame = document.getElementById('heroImageFrame');
+        if (heroFrame && !isTouchDevice) {
+            window.addEventListener('mousemove', (e) => {
+                const x = (e.clientX / window.innerWidth - 0.5) * 10;
+                const y = (e.clientY / window.innerHeight - 0.5) * -10;
+                heroFrame.style.transform = `perspective(800px) rotateY(${x}deg) rotateX(${y}deg)`;
+            });
+        }
+
+        // --- Premium Micro-Interactions (Senior Audit) ---
+        // Ripple Effect
+        document.querySelectorAll('.btn-wa, .btn-outline, .btn-demo-v3').forEach(btn => {
+            btn.addEventListener('mousedown', function(e) {
+                const x = e.clientX - e.target.getBoundingClientRect().left;
+                const y = e.clientY - e.target.getBoundingClientRect().top;
+                
+                const ripples = document.createElement('span');
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                ripples.classList.add('ripple');
+                
+                this.appendChild(ripples);
+                
+                setTimeout(() => {
+                    ripples.remove();
+                }, 600);
+            });
+
+            // Loading state for external links (simulate transition before opening new tab or navigating)
+            btn.addEventListener('click', function(e) {
+                const target = this.getAttribute('target');
+                const href = this.getAttribute('href');
+                
+                if (href && href.startsWith('#')) return; // Ignore anchor links
+
+                if (!target || target !== '_blank') {
+                    // Internal navigation: add loading state and delay slightly
+                    e.preventDefault();
+                    this.classList.add('is-loading');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
