@@ -26,6 +26,8 @@ html {
 
 p {
     line-height: 1.65;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 body {
@@ -808,7 +810,7 @@ body {
         font-size: clamp(2.2rem, 14vw, 3.7rem);
     }
 
-    .skills-grid {
+    .about-skills {
         grid-template-columns: 1fr;
     }
 
@@ -1397,5 +1399,12 @@ body {
     }
     .hero-section {
         padding: 50px 20px 140px;
+    }
+    .boxed-wrapper {
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
     }
 }

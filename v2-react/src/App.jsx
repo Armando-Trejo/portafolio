@@ -63,12 +63,12 @@ function App() {
     const target = e.currentTarget;
     const x = e.clientX - target.getBoundingClientRect().left;
     const y = e.clientY - target.getBoundingClientRect().top;
-    
+
     const ripples = document.createElement('span');
     ripples.style.left = x + 'px';
     ripples.style.top = y + 'px';
     ripples.classList.add('ripple');
-    
+
     target.appendChild(ripples);
     setTimeout(() => ripples.remove(), 600);
   };
@@ -93,13 +93,14 @@ function App() {
       <nav className="nav-dock" id="navDock">
         <a href="#home" className="nav-item focus-visible active"><i className="fa-solid fa-house"></i></a>
         <a href="#web" className="nav-item focus-visible">WORKS</a>
+        <a href="#case-studies" className="nav-item focus-visible">CASES</a>
         <a href="#expo" className="nav-item focus-visible">EXPO</a>
         <a href="#virtual-360" className="nav-item focus-visible">360</a>
         <a href="#contact" className="nav-item highlight focus-visible"><i className="fa-solid fa-paper-plane"></i></a>
       </nav>
 
       <div className="boxed-wrapper page-transition-wrapper">
-        
+
         {/* HERO SECTION */}
         <header className="hero-section" id="home" data-reveal="true">
           <div className="hero-content">
@@ -109,11 +110,11 @@ function App() {
               <span className="gradient-text">TREJO</span>
             </h1>
             <p className="hero-sub">
-              {lang === 'es' 
-                ? "Traduzco requerimientos de negocio en ecosistemas digitales viables. Experiencia demostrada creando sistemas escalables y dirigiendo implementaciones ágiles." 
+              {lang === 'es'
+                ? "Traduzco requerimientos de negocio en ecosistemas digitales viables. Experiencia demostrada creando sistemas escalables y dirigiendo implementaciones ágiles."
                 : "Translating business requirements into viable digital ecosystems. Proven experience building scalable systems and directing agile executions."}
             </p>
-            
+
             <div className="hero-bullets">
               <div className="bullet-item"><i className="fa-solid fa-check"></i> {lang === 'es' ? "UI & Responsive Web Design" : "UI & Responsive Web Design"}</div>
               <div className="bullet-item"><i className="fa-solid fa-check"></i> {lang === 'es' ? "Figma (Auto-layout, Components, Prototyping)" : "Figma (Auto-layout, Components, Prototyping)"}</div>
@@ -135,7 +136,7 @@ function App() {
         <section className="section about-section" id="about" data-reveal="true">
           <span className="numb">00/</span>
           <h2 className="title">{lang === 'es' ? "SOBRE MÍ" : "ABOUT ME"}</h2>
-          
+
           <div className="about-grid">
             <div className="about-text">
               <p>
@@ -175,9 +176,33 @@ function App() {
           </div>
         </section>
 
-        {/* 02. EXPO */}
+        {/* 02. CASE STUDIES */}
+        <section className="section" id="case-studies" data-reveal="true">
+          <span className="numb">02/ CASE STUDIES (STAR)</span>
+          <h2 className="title">{lang === 'es' ? "Casos de Estudio" : "Case Studies"}</h2>
+          
+          <div className="case-grid">
+            <div className="case-info">
+              <h3>{lang === 'es' ? "Kiosco Interactivo Alaman" : "Alaman Interactive Kiosk"}</h3>
+              <p style={{ marginBottom: "16px" }}>
+                <strong>S:</strong> {lang === 'es' ? "Necesidad de una experiencia interactiva para convenciones sin internet y con alto tráfico." : "Need for a high-traffic offline interactive experience for conventions."}<br/>
+                <strong>T:</strong> {lang === 'es' ? "Diseñar un flujo multi-touch, rápido, amigable para todas las edades y de fácil manejo para administradores." : "Design a fast, multi-touch flow, friendly for all ages, and easy for admins to manage."}<br/>
+                <strong>A:</strong> {lang === 'es' ? "Arquitectura local, UI inmersiva con teclado digital automático, y un flujo de UX gamificado simplificando el uso." : "Local architecture, immersive UI with auto digital keyboard, and a gamified UX flow simplifying usage."}<br/>
+                <strong>R:</strong> {lang === 'es' ? "Aumento severo en participación, reducción de errores de red y operación autónoma sin soporte técnico constante." : "Significant increase in engagement, reduced network errors, and autonomous operation without constant support."}
+              </p>
+              <a href="#contact" className="btn-outline focus-visible" onMouseDown={handleRipple}>
+                {lang === 'es' ? "Solicitar Detalles" : "Request Details"} <i className="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div className="case-visual">
+              <img src="/IMAGENES/visor-min.webp" alt="Alaman Workflow" />
+            </div>
+          </div>
+        </section>
+
+        {/* 03. EXPO */}
         <section className="section" id="expo" data-reveal="true">
-          <span className="numb">02/ PRODUCT-LIKE EXPERIENCES</span>
+          <span className="numb">03/ PRODUCT-LIKE EXPERIENCES</span>
           <h2 className="title">{lang === 'es' ? "Activaciones Digitales & Prototipado" : "Digital Activations & Prototyping"}</h2>
           <div className="expo-grid-v3">
             <div className="expo-card-v3">
@@ -207,9 +232,9 @@ function App() {
           </div>
         </section>
 
-        {/* 03. VIRTUAL 360 */}
+        {/* 04. VIRTUAL 360 */}
         <section className="section" id="virtual-360" data-reveal="true">
-          <span className="numb">03/ IMMERSIVE</span>
+          <span className="numb">04/ IMMERSIVE</span>
           <h2 className="title">{lang === 'es' ? "Visitas Virtuales 360" : "Virtual 360 Tours"}</h2>
           <div className="full-width-card">
             <div className="card-overlay"><h3>{lang === 'es' ? "Visor Inmobiliario Inmersivo" : "Real Estate Immersive Viewer"}</h3></div>
