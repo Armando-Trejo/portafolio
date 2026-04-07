@@ -103,11 +103,10 @@ function App() {
         {/* HERO SECTION */}
         <header className="hero-section" id="home" data-reveal="true">
           <div className="hero-content">
-            <div className="status-tag">● PRODUCT & UI DESIGNER</div>
-            <h1 className="hero-title">
-              {lang === 'es' 
-                ? <><span className="gradient-text">Product Designer</span> enfocado en sistemas viables.</>
-                : <><span className="gradient-text">Product Designer</span> focused on viable UI systems.</>}
+            <div className="status-tag">● PRODUCT DESIGNER</div>
+            <h1 className="hero-title name-title">
+              ARMANDO <br className="mobile-break" />
+              <span className="gradient-text">TREJO</span>
             </h1>
             <p className="hero-sub">
               {lang === 'es' 
@@ -131,6 +130,28 @@ function App() {
             <img src="/IMAGENES/foto-de-perfil.webp" alt="Armando Trejo" />
           </div>
         </header>
+
+        {/* 00. SOBRE MI */}
+        <section className="section about-section" id="about" data-reveal="true">
+          <span className="numb">00/</span>
+          <h2 className="title">{lang === 'es' ? "SOBRE MÍ" : "ABOUT ME"}</h2>
+          
+          <div className="about-grid">
+            <div className="about-text">
+              <p>
+                {lang === 'es'
+                  ? "Me especializo en crear productos digitales y flujos de trabajo escalables integrando diseño, creatividad e inteligencia artificial. Desde el prototipado de sitios web hasta la creación de herramientas asistidas por IA, mi objetivo es hacer que la producción creativa sea más eficiente y sorprendente. Como líder de equipo, me enfoco en la adopción tecnológica para elevar resultados. Busco nuevos retos donde el diseño y la innovación tecnológica se unan."
+                  : "I specialize in building scalable digital products and workflows by integrating design, creativity, and artificial intelligence. From website prototyping to creating AI-assisted tools, my goal is to make creative production more efficient and stunning. As a team leader, I focus on technological adoption to elevate results. I am looking for new challenges where design and technological innovation unite."}
+              </p>
+            </div>
+            <div className="about-skills">
+              <div className="skill-card focus-visible"><i className="fa-brands fa-figma"></i> <span>Figma</span></div>
+              <div className="skill-card focus-visible"><i className="fa-solid fa-wand-magic-sparkles"></i> <span>{lang === 'es' ? "IA Generativa" : "Generative AI"}</span></div>
+              <div className="skill-card focus-visible"><i className="fa-brands fa-wordpress"></i> <span>WordPress + Elementor</span></div>
+              <div className="skill-card focus-visible"><i className="fa-solid fa-bezier-curve"></i> <span>Adobe Suite</span></div>
+            </div>
+          </div>
+        </section>
 
         {/* 01. WEB PRODUCTION CAROUSEL */}
         <section className="section" id="web" data-reveal="true">
